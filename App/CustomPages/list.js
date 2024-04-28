@@ -18,12 +18,15 @@ function List ({navigation}) {
 
   return (
     <View style={styles.container}>
-
+         <Text style={styles.titreGrand}>Legends of XEFI</Text>
           <ScrollView style={styles.results}>
             {results.map((result) => (
-              <Text key={result.id}
+              <View style={styles.containerList}>
+                    <Text key={result.id}
               source={{ uri: result.previewURL }}
               style={styles.text} >{result.name}{"\n"}{"\n"}{result.description}{"\n"}{"\n"}Rarity:{"\n"}{result.rarity}/5</Text>
+              </View>
+              
             ))}
           </ScrollView>
           
@@ -37,6 +40,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     
+  },
+  containerList: {
+    flex: 1,
+    backgroundColor: 'white'
+  },
+  titreGrand: {
+    color: '#3B5998',
+    fontSize: 24,
+    lineHeight: 84,
+    textAlign: 'center',
+    paddingTop: 60,
+    paddingBottom: 30    
+
   },
   input: {
     width: '75%',
@@ -53,16 +69,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   results: {
-    marginTop: 20,
+    
     
   },
   text: {
-    width: '90%' ,
-    margin: 20,
-    height: 300,
+    padding: 30,
+    color: 'white',
+    height: 200,
     marginBottom: 25,
+    
     alignContent: 'center',
-    color: '#3B5998'
+    backgroundColor: '#3B5998'
   },
   imageBG: {
     flex: 1,
