@@ -1,32 +1,26 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { TouchableOpacity, TextInput ,ImageBackground ,StyleSheet, Text, View, Button } from 'react-native';
+
+import {  TextInput,StyleSheet, Text, View, Button } from 'react-native';
 
 
 
 function Contact() {
   return (
     <View style={styles.container}>
-        
-            <Text style={styles.text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
-            <StatusBar style="auto" />
+            <Text style={styles.titreGrand}>Legends of XEFI</Text>
+            <Text style={styles.titre}>Formulaire de contact</Text>
             <TextInput
             style={styles.input}
-            placeholder="Alors la recherche ? ..."
-            placeholderTextColor="black"
-            value={"Votre email*"}
+            placeholder="Votre email*"
+            
             />
             <TextInput
-            style={styles.input}
-            placeholder="Alors la recherche ? ..."
-            placeholderTextColor="black"
-            value={"Sujet*"}
+            style={styles.input}        
+            placeholder="Sujet*"
             />
             <TextInput
             style={styles.inputMessage}
-            placeholder="Alors la recherche ? ..."
-            placeholderTextColor="black"
-            value={"Votre message*"}
+            placeholder="Votre message*"
             />
             <Button title="Envoyer" style={styles.button}>Envoyer</Button>
       
@@ -39,38 +33,47 @@ const styles = StyleSheet.create({
     flex: 1,
       
   },
-  
+  titreGrand: {
+    color: '#3B5998',
+    fontSize: 24,
+    lineHeight: 84,
+    textAlign: 'center',
+    paddingTop: 60,
+    paddingBottom: 30
+
+  },
+  titre: {
+    color: '#3B5998',
+    fontSize: 18,
+    fontWeight: 'bold',
+    paddingLeft: 30,
+    paddingBottom: 30
+  },
   input: {
-    width: '75%',
-    borderWidth: 2,
-    borderColor: 'black',
-    backgroundColor: 'rgba(169, 169, 169, 0.8)',
-    borderRadius: 5,
-    marginLeft: 50,
-    padding: 10,
-    marginBottom: 10,
+    width: '95%',
+    marginLeft: 10,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: '#3B5998',
+    padding: 20,
     justifyContent: 'center',
     alignContent : 'center',
     fontSize: 16,
-    fontWeight: 'bold',
+    color:'gray',
+    
   },
   inputMessage: {
-    width: '75%',
-    borderWidth: 2,
-    borderColor: 'black',
-    backgroundColor: 'rgba(169, 169, 169, 0.8)',
-    borderRadius: 5,
-    marginLeft: 50,
-    padding: 50,
-    marginBottom: 10,
-    
+    width: '95%',
+    marginLeft: 10,
+    borderWidth: 1,
+    borderColor: '#3B5998',
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingBottom: 200,
+    marginBottom: 20,
     fontSize: 16,
-    fontWeight: 'bold',
   },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
-  },
+  
   text: {
     color: 'white',
     fontSize: 20,
@@ -84,9 +87,9 @@ const styles = StyleSheet.create({
     width: '60%',
     marginLeft: '20%',
     padding: 10,
-    alignItems: 'center',
+    alignItems: 'right',
     borderColor: 'gray', 
-    backgroundColor: 'gray',
+    backgroundColor: '#3B5998'
   },
   buttonText: {
     fontSize: 16,
