@@ -23,7 +23,7 @@ function List ({navigation}) {
             {results.map((result) => (
               <Text key={result.id}
               source={{ uri: result.previewURL }}
-              style={styles.text} onPress={() => navigation.navigate('Personnage', { id: result.id })}>{result.name}{"\n"}{"\n"}{result.description}{"\n"}{"\n"}Rarity:{"\n"}{result.rarity}/5</Text>
+              style={styles.text} >{result.name}{"\n"}{"\n"}{result.description}{"\n"}{"\n"}Rarity:{"\n"}{result.rarity}/5</Text>
             ))}
           </ScrollView>
           
