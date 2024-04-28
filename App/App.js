@@ -24,7 +24,7 @@ function StackNavigator() {
 function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator  screenOptions={{headerStyle: { backgroundColor: '#3B5998'}, tabBarStyle:{backgroundColor: '#3B5998'}, tabBarInactiveTintColor: 'black', tabBarActiveTintColor: '#c0c0c0' }} tabBarOptions={{}}>
+      <Tab.Navigator  screenOptions={{headerShown: false, tabBarInactiveTintColor: 'black', tabBarActiveTintColor: '#c0c0c0' }}>
         <Tab.Screen name="Accueil" component={StackNavigator} />
         <Tab.Screen name="Les Personnages" component={List}/>
         <Tab.Screen name="Contact" component={Contact}/>

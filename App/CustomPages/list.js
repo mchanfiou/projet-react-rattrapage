@@ -36,7 +36,7 @@ function List ({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#c0c0c0"
+    
   },
   input: {
     width: '75%',
